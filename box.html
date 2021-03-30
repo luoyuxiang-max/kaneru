@@ -11,7 +11,7 @@
     border: 1px solid yellow;
     background-color: tomato;
 }
-.header,.footer{
+.header{
     height: 150px;
 }
 .aside,.aside1,.section{
@@ -33,15 +33,50 @@
     left: 500px;
     bottom: 300px;
 }
+footer{
+    height: 80px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
 </style>
 </head>
 <body>
+    <ul>
+        <li><a class="active" href="#home">主页</a></li>
+        <li><a href="#news">新闻</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li><a href="#about">关于</a></li>
+      </ul>
+      
 <header class="header">header</header>
 <aside class="aside">aside</aside>
 <aside class="aside1">aside</aside>
 <section class="section">section</section>
-<footer class="footer">footer</footer>
+
 <div class="float-div">luoyuxiang</div>
 
+<footer class="footer"><p>Posted by: W3School</p>
+<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</footer>
 </body>
 </html>
