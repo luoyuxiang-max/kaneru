@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.1.1"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+    </div>
+    <script>
+        var store = new Vuex.Store({
+            state:{
+                name:'vuex.js直接引用'
+            }
+        })
+        var mapState = Vuex.mapState
+        var vm = new Vue({
+            el:'#app',
+            store,
+            computed:mapState({
+                name:state=>state.name
+            }),
+            computed:{
+                name(){
+                    return this.$store.state.name
+                }
+            }
+        })
+    </script>
+</body>
+</html>
